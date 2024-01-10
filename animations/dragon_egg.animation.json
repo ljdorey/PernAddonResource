@@ -1,0 +1,45 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.dragon_egg.activate": {
+			"loop": false,
+			"animation_length": 3.0,
+			"particle_effects": {
+				"0.0": {
+					"effect": "dragon_egg_activate",
+					"locator": "egg"
+				}
+			}
+		},
+		"animation.dragon_egg.incubation": {
+			"loop": true,
+			"animation_length": 5.0,
+			"particle_effects": {
+				"0.0": {
+					"effect": "dragon_egg_incubating",
+					"locator": "egg"
+				}
+			}
+		},
+		"animation.dragon_egg.hatching": {
+			"loop": true,
+			"animation_length": 3.0,
+			"particle_effects": {
+				"0.0": {
+					"effect": "dragon_egg_hatching",
+					"locator": "egg"
+				}
+			}
+		},
+		"animation.dragon_egg.cracking": {
+			"loop": true,
+			"animation_length": 3.0,
+			"particle_effects": {
+				"0.0": {
+					"effect": "dragon_egg_cracking",
+					"locator": "egg"
+				}
+			}
+		}
+	}
+}

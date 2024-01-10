@@ -1,0 +1,23 @@
+{
+    "format_version": "1.20.51",
+	"animation_controllers": {
+		"controller.animation.dragon.idle": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": [
+						{ "idle": 1 }
+					],
+					"transitions": [
+						{ "non_idle": "query.has_rider || query.variant == 1"}
+					]
+				},
+				"non_idle": {
+					"transitions": [
+						{ "idle": "!query.has_rider && query.variant == 0" }
+					]
+				}
+			}
+		}
+	}
+}

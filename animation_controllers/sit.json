@@ -1,0 +1,23 @@
+{
+    "format_version": "1.20.51",
+	"animation_controllers": {
+		"controller.animation.dragon.sit": {
+			"initial_state": "standing",
+			"states": {
+				"standing": {
+					"transitions": [
+						{ "sitting": "query.variant == 1"}
+					]
+				},
+				"sitting": {
+					"animations": [
+						{ "sit": 1 }
+					],
+					"transitions": [
+						{ "standing": "!query.is_on_ground || query.variant == 0" }
+					]
+				}
+			}
+		}
+	}
+}

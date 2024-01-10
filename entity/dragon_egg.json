@@ -1,0 +1,43 @@
+{
+	"format_version": "1.20.51",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "pern:dragon_egg",
+			"textures": {
+				"default": "textures/entity/dragonegg"
+			},
+			"materials": {
+				"default": "entity"
+			},
+			"geometry": {
+				"default": "geometry.dragon_egg"
+			},
+			"animations": {
+				"dragon_egg_controller": "controller.animation.dragon_egg.controller",
+				"dragon_egg_hatching": "animation.dragon_egg.hatching",
+				"dragon_egg_incubating": "animation.dragon_egg.incubation",
+				"dragon_egg_cracking": "animation.dragon_egg.cracking"
+			},
+			"scripts": {
+				"animate": [
+					"dragon_egg_controller"
+				]
+			},
+			"particle_effects": {
+				"dragon_egg_cracking": "pern:dragon_egg_cracking",
+				"dragon_egg_hatching": "pern:dragon_egg_hatching",
+				"dragon_egg_incubating": "pern:dragon_egg_incubating"
+			},
+			"sound_effects": {
+				"crack_sound": "block.turtle_egg.crack"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#FFFFFF",
+				"overlay_color": "#340099"
+			}
+		}
+	}
+}

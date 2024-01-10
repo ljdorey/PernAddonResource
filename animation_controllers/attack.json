@@ -1,0 +1,29 @@
+{
+	"format_version": "1.20.51",
+	"animation_controllers": {
+		"controller.animation.dragon.attack": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"transitions": [
+						{
+							"attack": "variable.attack_time >= 0.01"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"attack": {
+					"animations": [
+						"attack"
+					],
+					"transitions": [
+						{
+							"idle": "variable.attack_time <= 0.0 && query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.1
+				}
+			}
+		}
+	}
+}

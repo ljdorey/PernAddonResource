@@ -1,0 +1,23 @@
+{
+    "format_version": "1.20.51",
+	"animation_controllers": {
+		"controller.animation.dragon.fly": {
+			"initial_state": "on_land",
+			"states": {
+				"on_land": {
+					"transitions": [
+						{ "jumping": "!query.is_in_water && !query.is_on_ground && query.has_rider && query.is_saddled"}
+					]
+				},
+				"jumping": {
+					"animations": [
+						{ "fly": 1 }
+					],
+					"transitions": [
+						{ "on_land": "query.is_in_water || query.is_on_ground || !query.has_rider || !query.is_saddled" }
+					]
+				}
+			}
+		}
+	}
+}

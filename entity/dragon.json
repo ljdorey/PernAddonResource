@@ -1,0 +1,57 @@
+{
+  "format_version": "1.20.51",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "pern:dragon",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/dragon_base",
+        "saddle": "textures/entity/dragon_base_saddled",
+        "chested": "textures/entity/dragon_base_chested"
+      },
+      "geometry": {
+        "default": "geometry.pern_dragon"
+      },
+      "animations": {
+        "walk": "animation.dragon.walk",
+        "fly": "animation.dragon.fly",
+        "fly_controller": "controller.animation.dragon.fly",
+        "idle": "animation.dragon.idle",
+        "attack": "animation.dragon.attack",
+        "attack_controller": "controller.animation.dragon.attack",
+        "idle_controller": "controller.animation.dragon.idle",
+        "sit": "animation.dragon.sit",
+        "sit_controller": "controller.animation.dragon.sit",
+        "look_at_target": "animation.dragon.look_at_target"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "walk": "query.modified_move_speed * query.is_on_ground "
+          },
+          {
+            "fly_controller": "query.has_rider"
+          },
+          {
+            "look_at_target": "query.is_on_ground * query.has_rider"
+          },
+          "idle_controller",
+          "attack_controller",
+          "sit_controller"
+        ]
+      },
+      "sound_effects": {
+        "flap_sound": "mob.enderdragon.flap"
+      },
+			"render_controllers": [
+				"controller.render.default"
+			],
+      "spawn_egg": {
+        "base_color": "#0D1217",
+        "overlay_color": "#096E87"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Pern Dragons Resource pack",
+        "name": "Pern Dragons Resource Pack",
+        "uuid": "ec6bff35-8b26-47f2-a5f1-a23d185a1fff",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 20, 40],
+        "vanilla": [1, 20, 0]
+    },
+    "modules": [
+        {
+            "description": "Pern Dragons Resource pack",
+            "type": "resources",
+            "uuid": "b05ae5e5-72f0-4760-a7a3-f7c29ab5e06e",
+            "version": [1, 0, 0]
+        }
+    ]
+}

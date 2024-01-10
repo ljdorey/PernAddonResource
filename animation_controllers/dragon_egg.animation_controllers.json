@@ -1,0 +1,50 @@
+{
+    "format_version": "1.20.51",
+    "animation_controllers": {
+        "controller.animation.dragon_egg.controller": {
+            "initial_state": "dragon_egg_incubation",
+            "states": {
+                "dragon_egg_stasis": {
+                    "blend_transition": 0.08,
+                    "blend_via_shortest_path": true,
+                    "transitions": [
+                        {
+                            "dragon_egg_incubation": "query.variant == 1"
+                        }
+                    ]
+                },
+                "dragon_egg_incubation": {
+                    "blend_transition": 0.08,
+                    "animations": [
+                        "dragon_egg_incubating"
+                    ],
+                    "blend_via_shortest_path": true,
+                    "transitions": [
+                        {
+                            "dragon_egg_hatching": "query.variant == 2"
+                        }
+                    ]
+                },
+                "dragon_egg_hatching": {
+                    "blend_transition": 0.08,
+                    "animations": [
+                        "dragon_egg_hatching"
+                    ],
+                    "blend_via_shortest_path": true,
+                    "transitions": [
+                        {
+                            "dragon_egg_cracking": "query.variant == 3"
+                        }
+                    ]
+                },
+                "dragon_egg_cracking": {
+                    "animations": [
+                        "dragon_egg_cracking"
+                    ],
+                    "blend_transition": 0.08,
+                    "blend_via_shortest_path": true
+                }
+            }
+        }
+    }
+}
