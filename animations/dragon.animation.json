@@ -2,8 +2,9 @@
 	"format_version": "1.8.0",
 	"animations": {
 		"animation.dragon.walk": {
-			"anim_time_update": "query.modified_distance_moved",
 			"loop": true,
+			"animation_length": 12.20833,
+			"anim_time_update": "query.modified_distance_moved",
 			"bones": {
 				"leg0": {
 					"rotation": ["math.cos(query.anim_time * 38.17) *  30", 0, 0]
@@ -22,6 +23,12 @@
 				},
 				"joint4": {
 					"rotation": [42.5, 0, 0]
+				},
+				"wing0": {
+					"rotation": [-100, -85, 0]
+				},
+				"wing1": {
+					"rotation": [-100, 85, 0]
 				}
 			}
 		},
@@ -319,6 +326,7 @@
 		},
 		"animation.dragon.look_at_target": {
 			"loop": true,
+			"animation_length": 2.29167,
 			"bones": {
 				"neck": {
 					"relative_to": {
